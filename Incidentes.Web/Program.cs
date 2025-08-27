@@ -1,6 +1,7 @@
 using Incidentes.Web;
 using Incidentes.Web.Interfaces;
 using Incidentes.Web.Services;
+using Incidentes.Web.StateContainers;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
@@ -19,5 +20,7 @@ builder.Services.AddScoped<IImpactoService, ImpactoService>();
 builder.Services.AddScoped<IPrioridadService, PrioridadService>();
 builder.Services.AddScoped<ITipoIncidenteService, TipoIncidenteService>();
 builder.Services.AddScoped<IIncidenteService, IncidenteService>();
+
+builder.Services.AddSingleton<IncidenteStateContainer>();
 
 await builder.Build().RunAsync();
