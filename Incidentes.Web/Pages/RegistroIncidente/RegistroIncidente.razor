@@ -67,12 +67,4 @@
     </EditForm>
 </MudPaper>
 
-@code {
-    [Inject] ISnackbar Snackbar { get; set; }
-    private Incidente _model = new();
 
-    private async Task RegistrarIncidente()
-    {
-        Snackbar.Add("Su solicitud de incidente ha sido registrada exitosamente.", Severity.Success);
-    }
-}

@@ -1,4 +1,5 @@
-﻿using Incidentes.Web.Entities;
+﻿using Incidentes.Web.DbResult;
+using Incidentes.Web.Entities;
 using Incidentes.Web.Interfaces;
 using System.Net.Http.Json;
 
@@ -12,11 +13,19 @@ namespace Incidentes.Web.Services
             _httpClient = httpClient;
         }
 
-        public async Task<bool> CrearIncidenteAsync(Incidente incidente)
+        public async Task<IncidenteResult> CrearIncidenteAsync(Incidente incidente)
         {
             var url = "api/incidente";
             var response = await _httpClient.PostAsJsonAsync(url, incidente);
-            return response.IsSuccessStatusCode;
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<IncidenteResult>();
+                return result;
+            }
+            else
+            {
+                return new IncidenteResult { PropiedadError = "Desconocido", MensajeError = $"Error en el servidor" };
+            }
         }
 
         public async Task<Incidente> GetIncidente(int id)
