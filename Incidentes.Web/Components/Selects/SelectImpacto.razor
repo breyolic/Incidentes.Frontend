@@ -1,0 +1,38 @@
+@using System.Linq.Expressions
+@inject IImpactoService ImpactoService
+
+<MudSelect Value="Id"
+           ValueChanged="OnIdChanged"
+           Variant="Variant.Filled"
+           Dense="true"
+           FullWidth="true"
+           ShrinkLabel="true"
+           T="int"
+           For="@For">
+    <MudSelectItem value="0" disabled>Seleccione el impacto</MudSelectItem>
+    @if (Impactos != null)
+    {
+        @foreach (var impacto in Impactos)
+        {
+            <MudSelectItem Value="@impacto.Id">@impacto.Descripcion</MudSelectItem>
+        }
+    }
+</MudSelect>
+
+@code {
+    private List<Impacto>? Impactos;
+    [Parameter] public int Id { get; set; }
+    [Parameter] public EventCallback<int> IdChanged { get; set; }
+    [Parameter] public Expression<Func<int>> For { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Impactos = await ImpactoService.GetImpactosAsync();
+    }
+
+    private async Task OnIdChanged(int value)
+    {
+        Id = value;
+        await IdChanged.InvokeAsync(value);
+    }
+}
