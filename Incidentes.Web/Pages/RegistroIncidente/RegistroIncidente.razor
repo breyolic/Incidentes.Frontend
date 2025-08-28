@@ -1,0 +1,70 @@
+@page "/registro-incidente"
+
+<MudPaper Class="pa-6 mx-auto my-6" Style="max-width: 600px;">
+    <MudText Typo="Typo.h6" Class="mb-0">Registro de Solicitud de Incidente</MudText>
+    <MudText Typo="Typo.body2" Class="mb-4">Complete el siguiente formulario para registrar su solicitud de atención de incidente</MudText>
+    <MudDivider Class="mb-4" />
+    <EditForm Model="_model" OnValidSubmit="RegistrarIncidente">
+        <DataAnnotationsValidator />
+        <MudGrid>
+            <MudItem xs="12">
+                <MudText Typo="Typo.subtitle2">Tipo de Incidente *</MudText>
+                <SelectTipoIncidente @bind-Id="_model.IdTipoIncidente"
+                                     For="@(() => _model.IdTipoIncidente)" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudText Typo="Typo.subtitle2">Descripción del Incidente *</MudText>
+                <MudTextField @bind-Value="_model.Descripcion"
+                              Placeholder="Describa claramente el incidente, incluyendo pasos para reproducirlo si es aplicable..."
+                              Lines="3"
+                              Variant="Variant.Filled"
+                              For="@(() => _model.Descripcion)" />
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.subtitle2">Impacto *</MudText>
+                <SelectImpacto @bind-Id="_model.IdImpacto"
+                               For="@(() => _model.IdImpacto)" />
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.subtitle2">Prioridad *</MudText>
+                <SelectPrioridad @bind-Id="_model.IdPrioridad"
+                                 For="@(() => _model.IdPrioridad)" />
+            </MudItem>
+        </MudGrid>
+        <MudDivider Class="my-4" />
+        <MudText Typo="Typo.subtitle2" Class="mb-2">Datos de Contacto</MudText>
+        <MudGrid>
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.subtitle2">Nombre Completo *</MudText>
+                <MudTextField @bind-Value="_model.NombreCompleto"
+                              Placeholder="Ingrese su nombre completo"
+                              Required="true"
+                              Variant="Variant.Filled"
+                              For="@(() => _model.NombreCompleto)" />
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.subtitle2">Teléfono *</MudText>
+                <MudTextField @bind-Value="_model.Telefono"
+                              Placeholder="Ingrese su número de teléfono"
+                              Required="true"
+                              Variant="Variant.Filled"
+                              For="@(() => _model.Telefono)" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudText Typo="Typo.subtitle2">Correo Electrónico *</MudText>
+                <MudTextField @bind-Value="_model.Email"
+                              Placeholder="ejemplo@correo.com"
+                              Required="true"
+                              Variant="Variant.Filled"
+                              For="@(() => _model.Email)" />
+            </MudItem>
+        </MudGrid>
+        <MudButton ButtonType="ButtonType.Submit"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   Class="mt-6"
+                   FullWidth="true">Registrar Solicitud</MudButton>
+    </EditForm>
+</MudPaper>
+
+

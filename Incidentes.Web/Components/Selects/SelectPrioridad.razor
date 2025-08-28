@@ -1,0 +1,39 @@
+@using System.Linq.Expressions
+@inject IPrioridadService PrioridadService
+
+<MudSelect Value="Id"
+           ValueChanged="OnIdChanged"
+           Variant="Variant.Filled"
+           Dense="true"
+           FullWidth="true"
+           Required="true"
+           ShrinkLabel="true"
+           T="int"
+           For="@For">
+    <MudSelectItem value="0" disabled>Seleccione la prioridad</MudSelectItem>
+    @if (Prioridades != null)
+    {
+        @foreach (var prioridad in Prioridades)
+        {
+            <MudSelectItem Value="@prioridad.Id">@prioridad.Descripcion</MudSelectItem>
+        }
+    }
+</MudSelect>
+
+@code {
+    private List<Prioridad>? Prioridades;
+    [Parameter] public int Id { get; set; }
+    [Parameter] public EventCallback<int> IdChanged { get; set; }
+    [Parameter] public Expression<Func<int>> For { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Prioridades = await PrioridadService.GetPrioridadesAsync();
+    }
+
+    private async Task OnIdChanged(int value)
+    {
+        Id = value;
+        await IdChanged.InvokeAsync(value);
+    }
+}
