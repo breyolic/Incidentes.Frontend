@@ -2,7 +2,7 @@
 
 <MudPaper Class="pa-6 mx-auto my-6" Style="max-width: 600px;">
     <MudText Typo="Typo.h6" Class="mb-0">Registro de Solicitud de Incidente</MudText>
-    <MudText Typo="Typo.body2" Class="mb-4">Complete el siguiente formulario para registrar su solicitud de atención de incidente</MudText>
+    <MudText Typo="Typo.body2" Class="mb-4">Complete el siguiente formulario para registrar su solicitud de atenciÃ³n de incidente</MudText>
     <MudDivider Class="mb-4" />
     <EditForm Model="_model" OnValidSubmit="RegistrarIncidente">
         <DataAnnotationsValidator />
@@ -13,7 +13,7 @@
                                      For="@(() => _model.IdTipoIncidente)" />
             </MudItem>
             <MudItem xs="12">
-                <MudText Typo="Typo.subtitle2">Descripción del Incidente *</MudText>
+                <MudText Typo="Typo.subtitle2">DescripciÃ³n del Incidente *</MudText>
                 <MudTextField @bind-Value="_model.Descripcion"
                               Placeholder="Describa claramente el incidente, incluyendo pasos para reproducirlo si es aplicable..."
                               Lines="3"
@@ -43,15 +43,15 @@
                               For="@(() => _model.NombreCompleto)" />
             </MudItem>
             <MudItem xs="12" sm="6">
-                <MudText Typo="Typo.subtitle2">Teléfono *</MudText>
+                <MudText Typo="Typo.subtitle2">TelÃ©fono *</MudText>
                 <MudTextField @bind-Value="_model.Telefono"
-                              Placeholder="Ingrese su número de teléfono"
+                              Placeholder="Ingrese su nÃºmero de telÃ©fono"
                               Required="true"
                               Variant="Variant.Filled"
                               For="@(() => _model.Telefono)" />
             </MudItem>
             <MudItem xs="12">
-                <MudText Typo="Typo.subtitle2">Correo Electrónico *</MudText>
+                <MudText Typo="Typo.subtitle2">Correo ElectrÃ³nico *</MudText>
                 <MudTextField @bind-Value="_model.Email"
                               Placeholder="ejemplo@correo.com"
                               Required="true"
@@ -66,5 +66,3 @@
                    FullWidth="true">Registrar Solicitud</MudButton>
     </EditForm>
 </MudPaper>
-
-

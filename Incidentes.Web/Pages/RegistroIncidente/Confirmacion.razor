@@ -3,12 +3,12 @@
 <MudPaper Class="pa-6 mx-auto my-6" Style="max-width: 520px;">
     <MudStack Spacing="2" AlignItems="AlignItems.Center">
         <MudIcon Icon="@Icons.Material.Filled.CheckCircle" Color="Color.Success" Size="Size.Large" />
-        <MudText Typo="Typo.h6" Color="Color.Success" Class="mt-2 mb-0">¡Solicitud Registrada Exitosamente!</MudText>
-        <MudText Typo="Typo.body2" Align="Align.Center" Class="mb-2">Su incidente ha sido registrado y será atendido por nuestro equipo de soporte</MudText>
+        <MudText Typo="Typo.h6" Color="Color.Success" Class="mt-2 mb-0">Â¡Solicitud Registrada Exitosamente!</MudText>
+        <MudText Typo="Typo.body2" Align="Align.Center" Class="mb-2">Su incidente ha sido registrado y serÃ¡ atendido por nuestro equipo de soporte</MudText>
 
         <MudPaper Elevation="0" Class="pa-3 mb-2" Style="background-color: #f6f8fc; width:100%;">
             <MudStack Row=true AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                <MudText Typo="Typo.body2" Class="font-weight-bold mb-0">Número de Ticket:</MudText>
+                <MudText Typo="Typo.body2" Class="font-weight-bold mb-0">NÃºmero de Ticket:</MudText>
                 <MudText Typo="Typo.body2">@_incidente.Id</MudText>
             </MudStack>
             <MudStack Row=true AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
@@ -23,10 +23,10 @@
 
         <MudAlert Severity="Severity.Info" Variant="Variant.Outlined" Dense="true" Class="mb-2" Style="width:100%;">
             <MudText Typo="Typo.subtitle2" Class="font-weight-bold mb-1">Importante:</MudText>
-            <MudText Typo="Typo.body2">Guarde el número de ticket para futuras consultas. Recibirá una notificación por correo electrónico cuando su solicitud sea procesada.</MudText>
+            <MudText Typo="Typo.body2">Guarde el nÃºmero de ticket para futuras consultas. RecibirÃ¡ una notificaciÃ³n por correo electrÃ³nico cuando su solicitud sea procesada.</MudText>
         </MudAlert>
 
-        <MudText Typo="Typo.body2" Align="Align.Center" Class="mb-4">Gracias por contactarnos. Nuestro equipo de soporte técnico se pondrá en contacto con usted según la prioridad asignada a su solicitud.</MudText>
+        <MudText Typo="Typo.body2" Align="Align.Center" Class="mb-4">Gracias por contactarnos. Nuestro equipo de soporte tÃ©cnico se pondrÃ¡ en contacto con usted segÃºn la prioridad asignada a su solicitud.</MudText>
         <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@OnRegistrarNuevo">Registrar Nuevo Incidente</MudButton>
     </MudStack>
 </MudPaper>

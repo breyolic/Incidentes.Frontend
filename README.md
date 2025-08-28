@@ -1,17 +1,17 @@
 # Incidentes.Web
 
-Aplicación web desarrollada en **Blazor WebAssembly (.NET 8)** para el registro y gestión de solicitudes de incidentes. Utiliza **MudBlazor** como framework de componentes UI para una experiencia moderna y responsiva.
+AplicaciÃ³n web desarrollada en **Blazor WebAssembly (.NET 8)** para el registro y gestiÃ³n de solicitudes de incidentes. Utiliza **MudBlazor** como framework de componentes UI para una experiencia moderna y responsiva.
 
-## Características
+## CaracterÃ­sticas
 
 - Registro de incidentes mediante formulario interactivo.
-- Selección de tipo de incidente, impacto y prioridad.
-- Confirmación y visualización de ticket tras el registro.
-- Navegación sencilla con menú lateral.
-- Integración con servicios backend vía API REST.
+- SelecciÃ³n de tipo de incidente, impacto y prioridad.
+- ConfirmaciÃ³n y visualizaciÃ³n de ticket tras el registro.
+- NavegaciÃ³n sencilla con menÃº lateral.
+- IntegraciÃ³n con servicios backend vÃ­a API REST.
 - Interfaz moderna basada en MudBlazor.
 
-## Tecnologías
+## TecnologÃ­as
 
 - [.NET 8](https://dotnet.microsoft.com/)
 - [Blazor WebAssembly](https://learn.microsoft.com/aspnet/core/blazor/)
@@ -20,15 +20,15 @@ Aplicación web desarrollada en **Blazor WebAssembly (.NET 8)** para el registro 
 ## Estructura principal
 
 - `Pages/RegistroIncidente/RegistroIncidente.razor`: Formulario de registro de incidentes.
-- `Pages/RegistroIncidente/Confirmacion.razor`: Página de confirmación tras registrar un incidente.
-- `Layout/MyNavMenu.razor`: Menú de navegación lateral.
-- `Program.cs`: Configuración de servicios, HttpClient y MudBlazor.
-- `wwwroot/index.html`: Página principal y recursos estáticos.
+- `Pages/RegistroIncidente/Confirmacion.razor`: PÃ¡gina de confirmaciÃ³n tras registrar un incidente.
+- `Layout/MyNavMenu.razor`: MenÃº de navegaciÃ³n lateral.
+- `Program.cs`: ConfiguraciÃ³n de servicios, HttpClient y MudBlazor.
+- `wwwroot/index.html`: PÃ¡gina principal y recursos estÃ¡ticos.
 
-## Configuración y ejecución
+## ConfiguraciÃ³n y ejecuciÃ³n
 
-1. **Clona el repositorio** y abre la solución en Visual Studio o VS Code.
-2. Asegúrate de tener instalado .NET 8 SDK.
+1. **Clona el repositorio** y abre la soluciÃ³n en Visual Studio o VS Code.
+2. AsegÃºrate de tener instalado .NET 8 SDK.
 3. Configura la URL base de la API en `appsettings.json` si es necesario.
 4. Restaura los paquetes y ejecuta el proyecto:
 
@@ -37,13 +37,13 @@ dotnet restore
 dotnet run --project Incidentes.Web
 ```
 
-5. Accede a la aplicación en tu navegador en `https://localhost:puerto/`.
+5. Accede a la aplicaciÃ³n en tu navegador en `https://localhost:puerto/`.
 
-## Personalización
+## PersonalizaciÃ³n
 
 - Puedes modificar los servicios de API en la carpeta `Services`.
 - Los componentes de UI pueden personalizarse en la carpeta `Pages`.
 
-## Créditos
+## CrÃ©ditos
 
 - Basado en Blazor WebAssembly y MudBlazor.
