@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Incidentes.Web",
   "resources": {
-    "hash": "sha256-uYJKdaxkxCnlpBE4kMq/owUQpXKLJqLfJilzaCPe/ZM=",
+    "hash": "sha256-Xs4GKxifOU78WMrsPM9TyYqVsftFqwn0asiDzBk9fIk=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-O/NCYcAN9uPocD7ns7AzF/cqx7f5vL1PTJCQs0vEXyk="
     },
@@ -63,7 +63,7 @@
       "System.Threading.wasm": "sha256-6r75HNYn94aq1XKrlUCGk0t1f2/OxQTd3T/Oa3OHvuE=",
       "System.wasm": "sha256-/Ib2sECJIp5OmAw2FVP/3jA36Bh6yA6fac798DlmOd8=",
       "System.Private.CoreLib.wasm": "sha256-hOEuvPr5JnhRVIZgwHCr09BYl8Rf6X3c/VWXLt2e91U=",
-      "Incidentes.Web.wasm": "sha256-3ob6C5Q2/9RnUO50oL0xqUIf8fO6I8UgJu/NxGvFt8s="
+      "Incidentes.Web.wasm": "sha256-ah7yPzTodISJcefGzg/mCneB3tajMWwbq5ooO4nlQoc="
     }
   },
   "cacheBootResources": true,
