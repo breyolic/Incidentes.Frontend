@@ -1,4 +1,6 @@
+@inject NavigationManager Navigation
+
 <MudNavMenu>
-    <MudNavLink Href="/" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
-    <MudNavLink Href="/registro-incidente" Icon="@Icons.Material.Filled.AddAlert">Registrar Incidente</MudNavLink>
+    <MudNavLink Href="@Navigation.BaseUri" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+    <MudNavLink Href=@($"{Navigation.BaseUri}registro-incidente") Icon="@Icons.Material.Filled.AddAlert">Registrar Incidente</MudNavLink>
 </MudNavMenu>
